@@ -1,0 +1,4 @@
+#!/bin/bash
+
+root_dir=$(realpath $(dirname $0))
+sudo chown -R egg:egg $root_dir/../src/

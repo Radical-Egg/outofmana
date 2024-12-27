@@ -1,0 +1,15 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'notes on how to do stuff with linux'
+theme = "paper"
+
+[params]
+color = 'linen'
+rss = true
+name = 'egg'
+bio = '''
+Notes to myself about how to do random stuff with Linux
+'''
+
+[params.giscus]
+theme = 'light'
