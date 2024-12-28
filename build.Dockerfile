@@ -4,14 +4,16 @@ ENV HUGO_ENVIRONMENT=production
 WORKDIR /app
 COPY ./src /app
 
-RUN hugo
+RUN apk add git
+RUN git submodule init; \
+	git submodule update; \	
+	hugo
 
 FROM nginx:stable-alpine
 
-WORKDIR /usr/share/nginx/html
+WORKDIR /opt/outofmana
 
-COPY --from=build /app/public/ .
-COPY ./docker/configs/outofmana.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/public/ /opt/outofmana/
 
 EXPOSE 80/tcp
 EXPOSE 443/tcp

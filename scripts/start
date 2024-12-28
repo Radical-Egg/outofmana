@@ -1,0 +1,8 @@
+#!/bin/bash
+
+root_dir=$(realpath $(dirname $0))
+
+cd $root_dir/..
+
+docker compose -f docker-compose.yml \
+	-f docker-compose.prod.yml up -d

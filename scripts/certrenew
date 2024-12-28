@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker compose exec certbot certbot renew
+docker compose exec outofmana nginx -s reload
