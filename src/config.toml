@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://outofmana.mushrooms.dev'
 languageCode = 'en-us'
 title = 'notes on how to do stuff with linux'
 theme = "paper"
@@ -14,3 +14,6 @@ Notes to myself about how to do random stuff with Linux
 
 [params.giscus]
 theme = 'light'
+
+[server]
+  bind = "0.0.0.0"

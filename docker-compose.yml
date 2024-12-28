@@ -1,7 +1,7 @@
 services:
   hugo:
-    image: klakegg/hugo:0.101.0
+    image: radical-egg/hugo:latest
     volumes:
-      - "./src:/src"
+      - "./src:/app"
     ports:
       - "1313:1313"
