@@ -1,7 +1,14 @@
 #!/bin/bash
 
 root_dir=$(realpath $(dirname $0))
+
 cd $root_dir/..
 
 ./scripts/build
 
+mkdir -p ./tmp
+
+rm -rf ./tmp/*.tar
+
+docker save -o ./tmp/hugo.tar radicalegg/hugo:latest
+docker save -o ./tmp/outofmana.tar radicalegg/outofmana:latest
