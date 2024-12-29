@@ -1,6 +1,6 @@
 services:
   hugo:
-    image: radical-egg/hugo:latest
+    image: radicalegg/hugo:latest
     volumes:
       - "./src:/app"
     ports:

@@ -1,4 +1,4 @@
-FROM radical-egg/hugo:latest as build
+FROM radicalegg/hugo:latest as build
 ENV HUGO_ENVIRONMENT=production
 
 WORKDIR /app
@@ -6,8 +6,8 @@ COPY ./src /app
 
 RUN apk add git
 RUN git submodule init; \
-	git submodule update; \	
-	hugo
+    git submodule update; \	
+    hugo
 
 FROM nginx:stable-alpine
 

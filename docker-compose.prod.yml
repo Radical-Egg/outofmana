@@ -1,6 +1,6 @@
 services:
   hugo:
-    image: radical-egg/outofmana:latest
+    image: radicalegg/outofmana:latest
     container_name: outofmana
     environment:
       HUGO_ENVIRONMENT: production
