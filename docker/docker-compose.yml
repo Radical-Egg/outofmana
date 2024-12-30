@@ -2,6 +2,6 @@ services:
   hugo:
     image: radicalegg/hugo:latest
     volumes:
-      - "./src:/app"
+      - "../src:/app"
     ports:
       - "1313:1313"
