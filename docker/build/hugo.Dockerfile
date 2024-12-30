@@ -28,7 +28,7 @@ COPY --from=build /app/hugo /usr/local/bin/hugo
 COPY --from=build /sbin/su-exec /sbin/su-exec
 
 
-COPY ./docker/entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]

@@ -4,9 +4,12 @@ root_dir=$(realpath $(dirname $0))
 
 cd $root_dir/../docker/build
 
-docker build . -t radicalegg/hugo
+docker build \
+    -f hugo.Dockerfile \
+    -t radicalegg/hugo .
+
+cd $root_dir/..
 
 docker build \
     --no-cache \
-    -f build.Dockerfile \
     -t radicalegg/outofmana .

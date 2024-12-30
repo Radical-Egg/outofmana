@@ -1,14 +1,10 @@
 #!/bin/bash
 
-root_dir=$(realpath $(dirname $0))
+# EE_PATH is the path to vps_ee repo for deployment
+[ -z $EE_PATH ] && {
+    echo "EE_PATH undefined"
+    exit 1
+}
 
-cd $root_dir/..
-
-./scripts/build
-
-mkdir -p ./tmp
-
-rm -rf ./tmp/*.tar
-
-docker save -o ./tmp/hugo.tar radicalegg/hugo:latest
-docker save -o ./tmp/outofmana.tar radicalegg/outofmana:latest
+cd $EE_PATH
+ansible-playbook -i inventory playbooks/deploy_oom.yml

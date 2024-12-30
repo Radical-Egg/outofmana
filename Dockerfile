@@ -2,7 +2,7 @@ FROM radicalegg/hugo:latest as build
 ENV HUGO_ENVIRONMENT=production
 
 WORKDIR /app
-COPY ./src /app
+COPY ./src/ /app
 
 RUN apk add git
 RUN git submodule init; \
