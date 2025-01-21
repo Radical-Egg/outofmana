@@ -12,6 +12,7 @@ bio = '''
 Notes to myself about how to do random stuff with Linux
 '''
 
+
 [params.giscus]
 theme = 'light'
 

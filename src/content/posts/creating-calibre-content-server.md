@@ -12,8 +12,6 @@ draft: true
 
 # Project Setup / Stuff
 
-This project setup / initial configurations can be grabbed from [here](https://github.com/Radical-Egg/calibre-web-setup.git). 
-
 * [Calibre](https://hub.docker.com/r/linuxserver/calibre)
   * A place to store my books in so that I can use different types of
     eReaders without having to worry about formats.
